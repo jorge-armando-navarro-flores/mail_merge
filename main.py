@@ -8,7 +8,7 @@ with open("./Input/Letters/starting_letter.txt", "r") as letter_file:
 
 for name in names:
     new_name = name.strip()
-    new_content = letter_template.replace("[name]", new_name)
+    new_content = letter_template.replace(PLACEHOLDER, new_name)
     with open(f"./Output/ReadyToSend/letter_for_{new_name}.txt", "w") as new_letter:
         new_letter.write(new_content)
 
